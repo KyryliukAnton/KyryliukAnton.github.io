@@ -1,0 +1,63 @@
+*{
+	box-sizing:border-box;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items{
+    flex-basis: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	transition: all 0.5s;
+	&:hover{
+		flex-basis:100%;
+	}
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	color:white;
+	font-family: 'Bad Script', sans-serif;
+}
+
+span{
+	font-size: 5rem;
+	text-shadow: 0 0 10px #000;
+}
+.items-1{
+	background: url(../img/1.jpeg) no-repeat center center;
+}
+
+.items-2{
+	background: url(../img/2.jpg) no-repeat center center;
+}
+.items-3{
+	background: url(../img/3.jpg) no-repeat center center;
+}
+.items-4{
+	background: url(../img/4.jpg) no-repeat center center;
+}
+.items-1, .items-2, .items-3,.items-4{
+	background-size: cover;
+}
+
+@media (max-width: 640px) {
+	.slider{
+		flex-flow: column;
+		height:100vh;
+	}
+	.items{
+		width: 100%;
+		&:hover{
+			flex-grow:30%;
+		}
+	}
+
+}
